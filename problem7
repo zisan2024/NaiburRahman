@@ -1,0 +1,62 @@
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        // Creating strings
+        String str1 = "Hello";
+        String str2 = "World";
+        String str3 = "hello";
+        
+        // Concatenation
+        String concatenated = str1.concat(" ").concat(str2);
+        System.out.println("Concatenated: " + concatenated);
+        
+        // Comparison
+        boolean isEqual = str1.equals(str3); // Case-sensitive comparison
+        boolean isEqualIgnoreCase = str1.equalsIgnoreCase(str3); // Case-insensitive comparison
+        System.out.println("str1 equals str3 (case-sensitive): " + isEqual);
+        System.out.println("str1 equals str3 (case-insensitive): " + isEqualIgnoreCase);
+
+        // Length of a string
+        int length = concatenated.length();
+        System.out.println("Length of concatenated string: " + length);
+
+        // Substring
+        String substring = concatenated.substring(6, 11); // Extracts "World" from "Hello World"
+        System.out.println("Substring: " + substring);
+
+        // Character at a specific index
+        char charAtIndex = concatenated.charAt(4); // Gets the character at index 4
+        System.out.println("Character at index 4: " + charAtIndex);
+
+        // Replace a character
+        String replacedString = concatenated.replace('o', '0'); // Replaces 'o' with '0'
+        System.out.println("Replaced string: " + replacedString);
+
+        // Trim whitespace
+        String paddedString = "   Java Programming   ";
+        String trimmedString = paddedString.trim(); // Removes leading and trailing whitespace
+        System.out.println("Trimmed string: '" + trimmedString + "'");
+
+        // Check if a string contains a substring
+        boolean contains = concatenated.contains("World");
+        System.out.println("Does concatenated string contain 'World': " + contains);
+
+        // Convert to uppercase and lowercase
+        String upperCase = concatenated.toUpperCase();
+        String lowerCase = concatenated.toLowerCase();
+        System.out.println("Uppercase: " + upperCase);
+        System.out.println("Lowercase: " + lowerCase);
+
+        // Check if a string starts or ends with a substring
+        boolean startsWith = concatenated.startsWith("Hello");
+        boolean endsWith = concatenated.endsWith("World");
+        System.out.println("Does concatenated string start with 'Hello': " + startsWith);
+        System.out.println("Does concatenated string end with 'World': " + endsWith);
+
+        // Splitting a string
+        String[] words = concatenated.split(" "); // Splits the string by space
+        System.out.println("Split words:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
